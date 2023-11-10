@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:payment_app/view/widgets/form_field.dart';
+import 'package:payment_app/presntation/widgets/form_field.dart';
 
 class RegisterScreen extends StatelessWidget {
   RegisterScreen({super.key});
