@@ -6,6 +6,7 @@ class PaymentProcces extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
@@ -28,20 +29,18 @@ class PaymentProcces extends StatelessWidget {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
-            Expanded(
+            InkWell(
+              onTap: () {},
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Colors.black,
+                  color: Colors.white,
                 ),
-                width: double.infinity,
-                child: const Center(
-                  child: Text(
-                    "Refrance Code",
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 25,
-                    ),
+                child: Center(
+                  child: Image.network(
+                    "https://img.freepik.com/premium-vector/vector-3d-black-nfc-payment-machine-with-approved-status-paper-check-receipt-wifi-wireless-payment-pos-terminal-machine-design-template-bank-payment-contactless-terminal-mockup-top-view_153563-6966.jpg?size=626&ext=jpg&uid=R123558966&ga=GA1.1.1751511546.1692913916&semt=ais",
+                    fit: BoxFit.cover,
+                    height: 300,
                   ),
                 ),
               ),
@@ -49,21 +48,18 @@ class PaymentProcces extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            Expanded(
+            InkWell(
+              onTap: () {},
               child: Container(
                 decoration: BoxDecoration(
-                    color: Colors.grey,
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(20)),
-                width: double.infinity,
-                child: const Center(
-                  child: Text(
-                    "Visa",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 25,
-                    ),
-                  ),
-                ),
+                child: Center(
+                    child: Image.network(
+                  "https://img.freepik.com/premium-vector/black-electronic-credit-card-icon-finance-technology-isolated-white_3482-781.jpg?size=626&ext=jpg&uid=R123558966&ga=GA1.1.1751511546.1692913916&semt=ais",
+                  fit: BoxFit.cover,
+                  height: 300,
+                )),
               ),
             ),
           ],

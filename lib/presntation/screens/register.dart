@@ -45,19 +45,6 @@ class RegisterScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("SignUp",
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyLarge!
-                              .copyWith(fontSize: 30)),
-                      Text("To Save Your Mony",
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyLarge!
-                              .copyWith(fontSize: 20, color: Colors.grey)),
-                      const SizedBox(
-                        height: 50,
-                      ),
                       Image.network(
                         "https://paymob.com/images/logoC.png",
                         color: Colors.black,
@@ -94,6 +81,9 @@ class RegisterScreen extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBox(
+                        height: 20,
+                      ),
                       defualtFormField(
                           controller: emailController,
                           validate: (String value) {
@@ -103,6 +93,9 @@ class RegisterScreen extends StatelessWidget {
                           },
                           label: "Email",
                           type: TextInputType.emailAddress),
+                      const SizedBox(
+                        height: 20,
+                      ),
                       defualtFormField(
                           controller: phoneController,
                           validate: (String value) {
@@ -112,6 +105,9 @@ class RegisterScreen extends StatelessWidget {
                           },
                           label: "Phone",
                           type: TextInputType.number),
+                      const SizedBox(
+                        height: 20,
+                      ),
                       defualtFormField(
                           controller: priceController,
                           validate: (String value) {
@@ -122,7 +118,7 @@ class RegisterScreen extends StatelessWidget {
                           label: "Price",
                           type: TextInputType.number),
                       const SizedBox(
-                        height: 40,
+                        height: 80,
                       ),
                       MaterialButton(
                         height: 50,
@@ -140,7 +136,7 @@ class RegisterScreen extends StatelessWidget {
                           }
                         },
                         child: const Text(
-                          "Sign Up",
+                          "PAY",
                           style: TextStyle(color: Colors.white, fontSize: 20),
                         ),
                       )
