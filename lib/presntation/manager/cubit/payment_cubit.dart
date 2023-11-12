@@ -55,7 +55,7 @@ class PaymentCubit extends Cubit<PaymentStates> {
     required String price,
   }) async {
     emit(GetPaymentRequstLoadingState());
-    DioHelper.postDio(url: ApiConstant.getPaymentId, data: {
+    DioHelper.postDio(url: ApiConstant.getOrderId, data: {
       "auth_token": ApiConstant.paymentFirstToken,
       "amount_cents": price,
       "expiration": 3600,
@@ -79,7 +79,8 @@ class PaymentCubit extends Cubit<PaymentStates> {
       "integration_id": ApiConstant.cartId,
       "lock_order_when_paid": "false"
     }).then((value) {
-      ApiConstant.finalToken = value.data['token'];
+      ApiConstant.finalToken = value.data['token'].toString();
+      print("final token is : ${ApiConstant.finalToken.toString()}");
       emit(GetPaymentRequstSuccessState());
     }).catchError((err) {
       print(err.toString());

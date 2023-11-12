@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'presntation/screens/register.dart';
+import 'package:payment_app/presntation/screens/register.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
