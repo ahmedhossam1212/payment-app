@@ -1,27 +1,42 @@
-class PaymentStates {}
+abstract class PaymentStates {}
 
-class PaymentInitStates extends PaymentStates {}
+class PaymentInitialStates extends PaymentStates {}
 
-class GetAuthTokenLoadingState extends PaymentStates {}
+class PaymentAuthLoadingStates extends PaymentStates {}
 
-class GetAuthTokenSuccessState extends PaymentStates {}
+class PaymentAuthSuccessStates extends PaymentStates {}
 
-class GetAuthTokenErrState extends PaymentStates {}
+class PaymentAuthErrorStates extends PaymentStates {
+  final String error;
+  PaymentAuthErrorStates(this.error);
+}
 
-class GetOrderIdLoadingState extends PaymentStates {}
+// for order id
+class PaymentOrderIdLoadingStates extends PaymentStates {}
 
-class GetOrderIdSuccessState extends PaymentStates {}
+class PaymentOrderIdSuccessStates extends PaymentStates {}
 
-class GetOrderIdErrState extends PaymentStates {}
+class PaymentOrderIdErrorStates extends PaymentStates {
+  final String error;
+  PaymentOrderIdErrorStates(this.error);
+}
 
-class GetPaymentRequstLoadingState extends PaymentStates {}
+// for request token
+class PaymentRequestTokenLoadingStates extends PaymentStates {}
 
-class GetPaymentRequstSuccessState extends PaymentStates {}
+class PaymentRequestTokenSuccessStates extends PaymentStates {}
 
-class GetPaymentRequstErrState extends PaymentStates {}
+class PaymentRequestTokenErrorStates extends PaymentStates {
+  final String error;
+  PaymentRequestTokenErrorStates(this.error);
+}
 
-class GetRefCodeLoadingState extends PaymentStates {}
+// for ref code
+class PaymentRefCodeLoadingStates extends PaymentStates {}
 
-class GetRefCodeSuccessState extends PaymentStates {}
+class PaymentRefCodeSuccessStates extends PaymentStates {}
 
-class GetRefCodeErrState extends PaymentStates {}
+class PaymentRefCodeErrorStates extends PaymentStates {
+  final String error;
+  PaymentRefCodeErrorStates(this.error);
+}

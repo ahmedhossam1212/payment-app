@@ -21,7 +21,7 @@ class RegisterScreen extends StatelessWidget {
       create: (context) => PaymentCubit()..getAuthToken(),
       child: BlocConsumer<PaymentCubit, PaymentStates>(
         listener: (context, state) {
-          if (state is GetPaymentRequstSuccessState) {
+          if (state is PaymentRequestTokenSuccessStates) {
             Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -127,12 +127,12 @@ class RegisterScreen extends StatelessWidget {
                         color: Colors.black,
                         onPressed: () {
                           if (formKey.currentState!.validate()) {
-                            cubit.getPaymentRequst(
-                                fName: fNameController.text,
-                                lName: lNameController.text,
+                            cubit.getOrderRegistrationID(
+                                price: priceController.text,
+                                firstName: fNameController.text,
+                                lastName: lNameController.text,
                                 email: emailController.text,
-                                phone: phoneController.text,
-                                price: priceController.text);
+                                phone: phoneController.text);
                           }
                         },
                         child: const Text(

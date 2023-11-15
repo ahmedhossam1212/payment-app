@@ -6,7 +6,7 @@ class DioHelper {
 
   static initDio() {
     dio = Dio(BaseOptions(
-      baseUrl: ApiConstant.baseURL,
+      baseUrl: ApiContest.baseUrl,
       headers: {"Content-Type": "application/json"},
       receiveDataWhenStatusError: true,
     ));
