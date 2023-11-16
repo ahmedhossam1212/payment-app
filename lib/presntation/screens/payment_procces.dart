@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:payment_app/presntation/manager/cubit/payment_cubit.dart';
 import 'package:payment_app/presntation/manager/states/payment_states.dart';
 import 'package:payment_app/presntation/screens/reference_code.dart';
+import 'package:payment_app/presntation/screens/visa_screen.dart';
 
 class PaymentProcces extends StatelessWidget {
   const PaymentProcces({super.key});
@@ -13,7 +14,6 @@ class PaymentProcces extends StatelessWidget {
       create: (context) => PaymentCubit(),
       child: BlocConsumer<PaymentCubit, PaymentStates>(
         listener: (context, state) {
-          print(state);
           if (state is PaymentRefCodeSuccessStates) {
             Navigator.push(
                 context,
@@ -70,7 +70,13 @@ class PaymentProcces extends StatelessWidget {
                     height: 20,
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const VisaScreen(),
+                          ));
+                    },
                     child: Container(
                       decoration: BoxDecoration(
                           color: Colors.white,

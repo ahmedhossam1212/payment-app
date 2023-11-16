@@ -17,7 +17,7 @@ class PaymentCubit extends Cubit<PaymentStates> {
     }).then((value) {
       authTokenModel = AuthenticationRequestModel.fromJson(value.data);
       ApiContest.paymentFirstToken = authTokenModel!.token;
-      print('The token 🍅');
+      print('The token 🍅 ${authTokenModel!.token}');
       emit(PaymentAuthSuccessStates());
     }).catchError((error) {
       print('Error in auth token 🤦‍♂️');
