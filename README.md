@@ -2,19 +2,6 @@
 
 An electronic payment gateway application that powered by PayMob, payment via Reference code or Visa card
 
-
-
-![WhatsApp Image 2023-11-16 at 6 16 36 PM (1)]()
-
-
-![WhatsApp Image 2023-11-16 at 6 16 36 PM]()
-
-![WhatsApp Image 2023-11-16 at 6 16 37 PM]()
-
-
-![WhatsApp Image 2023-11-16 at 6 16 37 PM (1)]()
-
-
 <p align="center">
 
  <img src="https://github.com/ahmedhossam1212/payment-app/assets/93291446/506d59a7-39b4-4ba3-98a8-f30b2976d0d3" width="200" />
